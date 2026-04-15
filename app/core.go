@@ -12,7 +12,7 @@ import (
 var execCommand = exec.Command
 
 func GetUpdates() ([]string, error) {
-	updates, err := exec.Command("paru", "-Qu").Output()
+	updates, err := execCommand("paru", "-Qu").Output()
 	if err != nil {
 		return nil, err
 	}
@@ -36,6 +36,6 @@ func toSlice(txt string) []string {
 
 func RunUpdates(packages []string) tea.Cmd {
 	args := append([]string{"-S"}, packages...)
-	cmd := exec.Command("paru", args...)
+	cmd := execCommand("paru", args...)
 	return tea.ExecProcess(cmd, nil)
 }
