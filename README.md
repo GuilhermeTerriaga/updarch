@@ -6,7 +6,8 @@
 Built with Bubble Tea.
 
 updarch lists all pending package updates from your AUR helper paru, lets you choose which packages to update, and then runs paru -S <selected> to apply the updates. This provides a convenient, keyboard-driven way to avoid mass updates and only upgrade what you need.
-Features
+
+## Features
 
     - Fetches available updates using paru -Qu
 
