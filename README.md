@@ -1,4 +1,4 @@
-#Updarch - An Arch linux update TUI
+# Updarch - An Arch linux update TUI
 
 ## Dependencies
 - [paru](https://github.com/morganamilo/paru)
