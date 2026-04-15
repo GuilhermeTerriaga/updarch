@@ -37,7 +37,7 @@ cd updarch
 go build -o updarch
 ```
 
-Optionally move the binary to your PATH:
+Optionally move the binary to your PATH
 
 
 ## Usage
