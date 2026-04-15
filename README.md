@@ -4,7 +4,6 @@
 - [paru](https://github.com/morganamilo/paru)
 
 Built with Bubble Tea.
-Description
 
 updarch lists all pending package updates from your AUR helper paru, lets you choose which packages to update, and then runs paru -S <selected> to apply the updates. This provides a convenient, keyboard-driven way to avoid mass updates and only upgrade what you need.
 Features
@@ -32,10 +31,11 @@ Features
 
 ### Build from source
 
-` git clone https://github.com/yourusername/updarch.git
+```
+git clone https://github.com/GuilhermeTerriaga/updarch.git
 cd updarch
 go build -o updarch
-`
+```
 
 Optionally move the binary to your PATH:
 
