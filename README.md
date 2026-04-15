@@ -3,7 +3,6 @@
 ## Dependencies
 - [paru](https://github.com/morganamilo/paru)
 
-Built with Bubble Tea.
 
 updarch lists all pending package updates from your AUR helper paru, lets you choose which packages to update, and then runs paru -S <selected> to apply the updates. This provides a convenient, keyboard-driven way to avoid mass updates and only upgrade what you need.
 
@@ -81,3 +80,4 @@ Package updates frequently assume that all other packages are at the latest vers
 
 **The author of updarch is not responsible for any system breakage resulting from partial updates. You have been warned.**
 
+Built with [Bubble Tea](https://github.com/charmbracelet/bubbletea).
