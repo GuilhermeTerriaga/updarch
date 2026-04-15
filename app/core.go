@@ -9,20 +9,22 @@ import (
 	tea "charm.land/bubbletea/v2"
 )
 
-func GetUpdates() ([]string, error){
-	updates, err := exec.Command("paru", "-Qu").Output()
+var execCommand = exec.Command
+
+func GetUpdates() ([]string, error) {
+	updates, err := execCommand("paru", "-Qu").Output()
 	if err != nil {
 		return nil, err
-    }
-    	output := string(updates)
+	}
+	output := string(updates)
 	packages := toSlice(output)
 	return packages, nil
 }
 
-func toSlice(txt string) []string{
+func toSlice(txt string) []string {
 	var packs []string
 	scan := bufio.NewScanner(strings.NewReader(txt))
-	for scan.Scan(){
+	for scan.Scan() {
 		parts := strings.Fields(scan.Text())
 		if len(parts) > 0 {
 			packs = append(packs, parts[0])
@@ -32,8 +34,8 @@ func toSlice(txt string) []string{
 	return packs
 }
 
-func RunUpdates(packages []string) tea.Cmd{
+func RunUpdates(packages []string) tea.Cmd {
 	args := append([]string{"-S"}, packages...)
-	cmd := exec.Command("paru", args...)
+	cmd := execCommand("paru", args...)
 	return tea.ExecProcess(cmd, nil)
 }
